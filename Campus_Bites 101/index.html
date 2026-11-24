@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Bites makes campus food ordering quick and convenient.">
+  <title>Campus Bites | Good food, less waiting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Hungry on campus? <strong>Your next favourite meal is a few clicks away.</strong></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Campus Bites home">
+      <span class="brand-mark">CB</span>
+      <span>campus<span class="brand-accent">bites</span><small>GOOD FOOD. LESS WAITING.</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#menu">Menu</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#why-us">Why Campus Bites</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" id="focus-search" aria-label="Focus search">⌕</button>
+      <button class="cart-button" id="open-cart"><span aria-hidden="true">🛒</span> <span>Cart</span><b id="cart-count">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> MADE FOR CAMPUS LIFE</span>
+        <h1>Big hunger.<br><span>Small wait.</span></h1>
+        <p>Your campus cravings, sorted. Find your favourite meals, order in a few clicks, and get back to what matters.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#menu">Explore the menu <span>↗</span></a>
+          <a class="text-link" href="#how-it-works">How it works <span>→</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>🍔</span><span>🍕</span><span>🍟</span></div>
+          <div><strong>Made for hungry students</strong><small>Quick picks. Clear prices. Easy ordering.</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a tasty burger meal">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-sticker sticker-top">FRESH<br>BITES <span>✦</span></div>
+        <div class="food-emoji" role="img" aria-label="Burger">🍔</div>
+        <div class="floating-card card-delivery"><span class="float-icon">⚡</span><span><strong>Easy ordering</strong><small>Less time in line</small></span></div>
+        <div class="floating-card card-rating"><span class="float-icon">💜</span><span><strong>Made for you</strong><small>Campus favourites</small></span></div>
+        <div class="hero-spark spark-one">✦</div><div class="hero-spark spark-two">✳</div>
+      </div>
+    </section>
+
+    <section class="quick-info" id="why-us">
+      <div><span class="info-icon">⏱</span><span><strong>Save your time</strong><small>Order without the long queue</small></span></div>
+      <div><span class="info-icon">🍽</span><span><strong>Know your options</strong><small>Meals and prices in one place</small></span></div>
+      <div><span class="info-icon">📍</span><span><strong>Campus-friendly</strong><small>Choose pickup or delivery</small></span></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE GOOD STUFF</span><h2>What are you craving?</h2><p>Find something delicious for your next study break.</p></div>
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search meals..." aria-label="Search meals"></label>
+      </div>
+      <div class="category-row" id="categories" aria-label="Filter by category">
+        <button class="category-chip selected" data-category="All">✨ Everything</button>
+        <button class="category-chip" data-category="Burgers">🍔 Burgers</button>
+        <button class="category-chip" data-category="Pizza">🍕 Pizza</button>
+        <button class="category-chip" data-category="Sides">🍟 Sides</button>
+        <button class="category-chip" data-category="Drinks">🥤 Drinks</button>
+      </div>
+      <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="empty-state">No meals found. Try another search or category.</div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="how-intro"><span class="eyebrow">THREE EASY STEPS</span><h2>Food plans,<br><span>simplified.</span></h2><p>Less time figuring out lunch. More time for your day.</p></div>
+      <div class="steps">
+        <article class="step-card"><span class="step-number">01</span><div class="step-illustration">🔎</div><h3>Find your favourite</h3><p>Browse meals, check prices, and choose what you want.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-illustration">🛍️</div><h3>Place your order</h3><p>Add items to your cart and choose pickup or delivery.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-illustration">😋</div><h3>Enjoy your food</h3><p>Get your order confirmation and enjoy your meal.</p></article>
+      </div>
+    </section>
+
+    <section class="bottom-cta"><div><span class="eyebrow">YOUR NEXT BITE IS CALLING</span><h2>Study hard. Eat well.</h2><p>Make your next campus meal an easy one.</p></div><a class="primary-button" href="#menu">Order something good <span>→</span></a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">CB</span><span>campus<span class="brand-accent">bites</span><small>GOOD FOOD. LESS WAITING.</small></span></a><p>Built for campus life, one bite at a time.</p><span>© <span id="year"></span> Campus Bites</span></footer>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">YOUR ORDER</span><h2>Your cart <span id="drawer-count">(0)</span></h2></div><button class="close-button" id="close-cart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><div>🛍️</div><h3>Your cart is taking a break</h3><p>Add a meal or two and it will be ready to go.</p><button class="primary-button" id="browse-menu">Browse menu <span>→</span></button></div>
+    <div class="cart-summary hidden" id="cart-summary">
+      <div class="summary-line"><span>Subtotal</span><strong id="subtotal">KSh 0</strong></div>
+      <div class="summary-line"><span>Delivery fee</span><strong id="delivery-fee">KSh 0</strong></div>
+      <div class="summary-line total-line"><span>Total</span><strong id="total">KSh 0</strong></div>
+      <button class="primary-button checkout-button" id="checkout-button">Continue to checkout <span>→</span></button>
+      <small class="demo-note">Demo checkout — no real payment is taken.</small>
+    </div>
+  </aside>
+
+  <div class="modal-wrap hidden" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <div class="checkout-modal">
+      <div class="drawer-header"><div><span class="eyebrow">ALMOST THERE</span><h2 id="checkout-title">Checkout</h2></div><button class="close-button" id="close-checkout" aria-label="Close checkout">×</button></div>
+      <form id="checkout-form">
+        <label>Full name<input name="customerName" required placeholder="e.g. Alex Wanjiku"></label>
+        <label>Phone number<input name="phone" type="tel" required pattern="[0-9+ ()-]{9,16}" placeholder="e.g. 07XX XXX XXX"></label>
+        <label>How would you like your order?
+          <select name="fulfilment" id="fulfilment"><option value="Pickup">Pickup</option><option value="Delivery">Delivery</option></select>
+        </label>
+        <label id="location-label">Pickup point<input name="location" id="location-input" required placeholder="e.g. Student centre"></label>
+        <label>Order notes <textarea name="notes" rows="2" placeholder="Any special instructions? (optional)"></textarea></label>
+        <div class="checkout-total"><span>Order total</span><strong id="checkout-total">KSh 0</strong></div>
+        <button class="primary-button checkout-button" type="submit">Place demo order <span>→</span></button>
+        <p class="demo-note">This prototype saves the order in this browser only. Online payments and server-side order storage are not connected yet.</p>
+      </form>
+      <div class="order-success hidden" id="order-success"><div>🎉</div><h3>Order details captured!</h3><p id="success-message"></p><p class="demo-note">This is a front-end demo confirmation, not a real submitted order.</p><button class="primary-button" id="finish-order">Back to menu <span>→</span></button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
